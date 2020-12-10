@@ -3,7 +3,8 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // the variables of to choose from
-
+  var randoChar = [];
+  var randoPass = [];
   var upperCas = [
     "A",
     "B",
@@ -69,22 +70,42 @@ function generatePassword() {
   if (passLength > 128 || passLength < 8) {
     alert("does not meet requirements");
   } else {
-    // upper case gen
+    // special char gen
 
     var specialchar = confirm(
       " would you like special characters? (okay for yes)"
     );
     var numchar = confirm("would you like numbers? (okay for yes)");
+    // lower case gen
     var caseSenseLow = confirm("would you like lower (okay for yes)");
-
+    // upper case gen
     var caseSense = confirm("would you like uppercase? (okay for yes)");
+
+    // adds special char
     if (specialchar === true) {
-      startPoint = startPoint.concat(specialchar);
+      startPoint = startPoint.concat(special);
+    }
+    // adds numbers
+    if (numchar === true) {
+      startPoint = startPoint.concat(num);
+    }
+    // adds lower case
+    if (caseSenseLow === true) {
+      startPoint = startPoint.concat(lowerCas);
+    }
+    // addes uppercase
+    if (caseSense === true) {
+      startPoint = startPoint.concat(upperCas);
     }
 
+    // random pass generator bassed on pass length and confirms
+
     for (let i = 0; i < passLength; i++) {
-      var caseup = upperCas[Math.floor(Math.random() * upperCas.length)];
-      console.log(passLength[caseup[i]]);
+      randoChar = startPoint[Math.floor(Math.random() * startPoint.length)];
+      randoPass = randoChar.toString();
+
+      console.log(typeof randoPass, randoPass);
+      // return randoPass;
     }
   }
 }
