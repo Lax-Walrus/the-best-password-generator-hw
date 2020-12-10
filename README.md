@@ -1,4 +1,4 @@
-![snapshot of final product]()
+![snapshot of final product](https://github.com/Lax-Walrus/the-best-password-generator-hw/blob/main/Assets/PasswordGenSnapShot.PNG?raw=true)
 
 [Click Me](https://lax-walrus.github.io/the-best-password-generator-hw/) to see the deployed website
 
