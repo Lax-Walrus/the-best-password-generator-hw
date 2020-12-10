@@ -96,18 +96,16 @@ function generatePassword() {
     // addes uppercase
     if (caseSense === true) {
       startPoint = startPoint.concat(upperCas);
-    }
-
-    // random pass generator bassed on pass length and confirms
-
-    for (let i = 0; i < passLength; i++) {
-      randoChar = startPoint[Math.floor(Math.random() * startPoint.length)];
-      randoPass = randoChar.toString();
-
-      console.log(typeof randoPass, randoPass);
-      // return randoPass;
-    }
+    } else alert("please select ok for at least one of the characters");
   }
+  // random pass generator bassed on pass length and confirms
+
+  for (let i = 0; i < passLength; i++) {
+    randoChar.push(startPoint[Math.floor(Math.random() * startPoint.length)]);
+    randoPass = randoChar.join("");
+  }
+  // gives the random password
+  return randoPass;
 }
 
 // Write password to the #password input
