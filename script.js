@@ -96,7 +96,7 @@ function generatePassword() {
     // addes uppercase
     if (caseSense === true) {
       startPoint = startPoint.concat(upperCas);
-    } else alert("please select ok for at least one of the characters");
+    }
   }
   // random pass generator bassed on pass length and confirms
 
